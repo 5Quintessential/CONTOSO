@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="Microsoft.DPE.ReferenceApps.Food.Client.Flyouts.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft.DPE.ReferenceApps.Food.Client.Flyouts"
+    xmlns:converters="using:Microsoft.DPE.ReferenceApps.Food.Lib.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="800"
+    d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <converters:SearchDistanceMilesConverter x:Key="convertSearchDistanceToText"/>
+    </UserControl.Resources>
+
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- make it cool -->
+        <Grid.Transitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.Transitions>
+
+        <!-- heading -->
+        <Border Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="&#xE112;" Style="{StaticResource AppBarButtonStyle}" Margin="0,20,0,0" Click="Button_Click_1" />
+                <TextBlock Style="{StaticResource HeaderTextStyle}" Foreground="Black" Text="Settings" VerticalAlignment="Center" x:Name="FlyoutTitle" />
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer Grid.Row="1" Padding="20" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                    <TextBlock FontSize="16" Margin="8,0,8,0">
+                       <Run Text="Search distance " /><Run Text="("/><Run Text="{Binding ElementName=MaxDistance,Path=Value, Converter={StaticResource convertSearchDistanceToText}, Mode=OneWay}"/><Run Text=")"/>
+                    </TextBlock>
+                    
+                <Slider x:Name="MaxDistance"  Minimum="1" Maximum="{Binding NearMeMaxDistanceThreshold}" Value="{Binding NearMeMaxDistance}" StepFrequency="5" 
+                        IsThumbToolTipEnabled="True"  VerticalAlignment="Bottom" TickFrequency="1" 
+                        Height="40" Foreground="{StaticResource AppPurpleBrush}" LargeChange="5" 
+                        SnapsTo="Ticks"  Margin="10,0,8,4" ThumbToolTipValueConverter="{StaticResource convertSearchDistanceToText}"/>
+                <Button x:Name="SetNearMeMaxDistanceBtn" Content="Set distance" Click="SetNearMeMaxDistanceBtn_Click" Margin="8,5,0,4"/>
+                
+                <ToggleSwitch 
+                    Margin="8,22,0,0"
+					FontSize="16"
+                    Header="Sample data"
+                    OnContent="On"
+                    OffContent="Off"
+                    IsOn="{Binding UseMockData, Mode=TwoWay}" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

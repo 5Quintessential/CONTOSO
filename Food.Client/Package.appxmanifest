@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="45307Ianisms.Windows8FoodDiningSampleApp" Publisher="CN=5B085E91-B9E3-4F6E-8AAE-D715BDD12357" Version="1.0.0.13" />
+  <Properties>
+    <DisplayName>Windows 8 Food &amp; Dining Sample App</DisplayName>
+    <PublisherDisplayName>ianisms</PublisherDisplayName>
+    <Logo>Assets\tile-50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Food.Client.App">
+      <VisualElements DisplayName="Windows 8 Food &amp; Dining Sample App" Logo="Assets\tile-150.png" SmallLogo="Assets\tile-30.png" Description="Contoso Food &amp; Dining" ForegroundText="dark" BackgroundColor="#E1E1E1" ToastCapable="false">
+        <DefaultTile ShowName="noLogos" />
+        <SplashScreen Image="Assets\splash-screen-logo_03.png" BackgroundColor="#E1E1E1" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.protocol">
+          <Protocol Name="contosofood">
+            <DisplayName>Contoso Food &amp; Dining</DisplayName>
+          </Protocol>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

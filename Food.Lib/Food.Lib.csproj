@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45F047C9-71F9-4B44-A037-37928EFF0FF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.DPE.ReferenceApps.Food.Lib</RootNamespace>
+    <AssemblyName>Food.Lib</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="SampleData\Restaurants.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="SampleData\AppData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Services\Factual\SearchResult.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Controls\BindableUserControl.cs" />
+    <Compile Include="Converters\BackgroundBrushConverter.cs" />
+    <Compile Include="Converters\CollectionCountVisibilityConverter.cs" />
+    <Compile Include="Converters\CuisineToStringConverter.cs" />
+    <Compile Include="Converters\HowManyMoreVisibilityConverter.cs" />
+    <Compile Include="Converters\NullVisibilityConverter.cs" />
+    <Compile Include="Converters\ParallaxConverter.cs" />
+    <Compile Include="Controls\FirstItemTemplateSelector.cs" />
+    <Compile Include="Controls\RatingsControl.cs" />
+    <Compile Include="Controls\StarRating.xaml.cs">
+      <DependentUpon>StarRating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VariableGridView.cs" />
+    <Compile Include="Converters\BooleanNegationConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\CusineRawStringToCusineNameConverter.cs" />
+    <Compile Include="Converters\DealPercentageSavingsConverter.cs" />
+    <Compile Include="Converters\DoubleRoundupConverter.cs" />
+    <Compile Include="Converters\HowManyMoreBooleanConverter.cs" />
+    <Compile Include="Converters\HowManyMoreTextConverter.cs" />
+    <Compile Include="Converters\ParagraphConverter.cs" />
+    <Compile Include="Converters\PhoneNumberFormattingConverter.cs" />
+    <Compile Include="Converters\PriceRangeToTextConverter.cs" />
+    <Compile Include="Converters\QuotedTextConverter.cs" />
+    <Compile Include="Converters\RatingToStarConverter.cs" />
+    <Compile Include="Converters\SearchDistanceMilesConverter.cs" />
+    <Compile Include="Converters\StarRatingConverter.cs" />
+    <Compile Include="Converters\TitleCaseConverter.cs" />
+    <Compile Include="Converters\NullableBoolToStringConverter.cs" />
+    <Compile Include="Converters\PriceRangeToDollarsConverter.cs" />
+    <Compile Include="Converters\DateTimeConverter.cs" />
+    <Compile Include="Converters\TrimConverter.cs" />
+    <Compile Include="Converters\UpperCaseConverter.cs" />
+    <Compile Include="Converters\VisibilityNegationConverter.cs" />
+    <Compile Include="Converters\ZeroVisibilityConverter.cs" />
+    <Compile Include="Helpers\FlyoutHelper.cs" />
+    <Compile Include="Helpers\LocationHelper.cs" />
+    <Compile Include="Helpers\OAuthManager.cs" />
+    <Compile Include="Services\BingMaps\LocationSearchHelper.cs" />
+    <Compile Include="Services\Exceptions\FoodLibServiceException.cs" />
+    <Compile Include="Helpers\FavoritesHelper.cs" />
+    <Compile Include="Helpers\MiscHelper.cs" />
+    <Compile Include="Helpers\SerializationHelper.cs" />
+    <Compile Include="Helpers\SettingsHelper.cs" />
+    <Compile Include="Helpers\StorageHelper.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Deal.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\IVariableGridItem.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Restaurant.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="SampleData\Mocks\MockOpenmenuCrosswalk.cs" />
+    <Compile Include="SampleData\Mocks\MockFactualCrosswalk.cs" />
+    <Compile Include="SampleData\Mocks\MockFactualSearch.cs" />
+    <Compile Include="SampleData\Mocks\MockOpenmenuSearch.cs" />
+    <Compile Include="SampleData\Mocks\MockYelpBusinessSearch.cs" />
+    <Compile Include="SampleData\Mocks\MockYelpSearch.cs" />
+    <Compile Include="SampleData\Restaurants.cs" />
+    <Compile Include="Services\BingSearch\ImageSearchHelper.cs" />
+    <Compile Include="Services\Factual\ICrosswalkHelper.cs" />
+    <Compile Include="Services\Factual\ISearchHelper.cs" />
+    <Compile Include="Services\BingMaps\StaticImageryHelper.cs" />
+    <Compile Include="Services\Factual\MultiQueryHelper.cs" />
+    <Compile Include="Services\Factual\SearchHelper.cs" />
+    <Compile Include="Services\Factual\CrosswalkHelper.cs" />
+    <Compile Include="Services\OpenMenu\CrosswalkHelper.cs" />
+    <Compile Include="Services\OpenMenu\ICrosswalkHelper.cs" />
+    <Compile Include="Services\OpenMenu\IMenuHelper.cs" />
+    <Compile Include="Services\OpenMenu\MenuHelper.cs" />
+    <Compile Include="Services\Unity.cs" />
+    <Compile Include="Services\Yelp\BusinessHelper.cs" />
+    <Compile Include="Services\Yelp\IBusinessHelper.cs" />
+    <Compile Include="Services\Yelp\IV1Helper.cs" />
+    <Compile Include="Services\Yelp\MetadataHelper.cs" />
+    <Compile Include="Services\Yelp\SearchHelper.cs" />
+    <Compile Include="Services\Yelp\V1Helper.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Models\AppData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Services\OpenMenu\Menu.xml" />
+    <Content Include="Services\OpenMenu\Response.Uuid.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\StarRating.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Callisto, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Callisto.1.0.8\lib\winrt45\Callisto.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

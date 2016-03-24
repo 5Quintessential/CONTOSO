@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="omf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="openmenu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="version" type="xs:decimal" />
+              <xs:element name="crosswalks">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="crosswalk">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="crosswalk_id" type="xs:string" />
+                          <xs:element name="crosswalk_company" type="xs:string" />
+                          <xs:element name="crosswalk_url" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="restaurant_info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="restaurant_name" type="xs:string" />
+              <xs:element name="business_type" type="xs:string" />
+              <xs:element name="brief_description" />
+              <xs:element name="full_description" />
+              <xs:element name="location_id" />
+              <xs:element name="mobile" />
+              <xs:element name="longitude" type="xs:decimal" />
+              <xs:element name="latitude" type="xs:decimal" />
+              <xs:element name="utc_offset" />
+              <xs:element name="address_1" type="xs:string" />
+              <xs:element name="address_2" type="xs:string" />
+              <xs:element name="city_town" type="xs:string" />
+              <xs:element name="state_province" type="xs:string" />
+              <xs:element name="postal_code" type="xs:unsignedShort" />
+              <xs:element name="country" type="xs:string" />
+              <xs:element name="region_area" />
+              <xs:element name="phone" type="xs:string" />
+              <xs:element name="fax" type="xs:string" />
+              <xs:element name="website_url" type="xs:string" />
+              <xs:element name="omf_file_url" type="xs:string" />
+              <xs:element name="logo_urls" type="xs:string" />
+              <xs:element name="environment">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="seating_qty" />
+                    <xs:element name="max_group_size" />
+                    <xs:element name="age_level_preference" />
+                    <xs:element name="smoking_allowed" />
+                    <xs:element name="takeout_available" />
+                    <xs:element name="delivery_available">
+                      <xs:complexType>
+                        <xs:attribute name="radius" type="xs:string" use="required" />
+                        <xs:attribute name="fee" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="catering_available" />
+                    <xs:element name="reservations" />
+                    <xs:element name="alcohol_type" />
+                    <xs:element name="music_type" />
+                    <xs:element name="pets_allowed" />
+                    <xs:element name="wheelchair_accessible" />
+                    <xs:element name="dress_code" type="xs:string" />
+                    <xs:element name="cuisine_type_primary" type="xs:string" />
+                    <xs:element name="cuisine_type_secondary" />
+                    <xs:element name="seating_locations" type="xs:string" />
+                    <xs:element name="accepted_currencies" type="xs:string" />
+                    <xs:element name="online_reservations" type="xs:string" />
+                    <xs:element name="online_ordering" type="xs:string" />
+                    <xs:element name="operating_days">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="operating_day">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="day_of_week" type="xs:unsignedByte" />
+                                <xs:element name="open_time" type="xs:string" />
+                                <xs:element name="close_time" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="parking" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="contacts" type="xs:string" />
+              <xs:element name="parent_company">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="parent_company_name" />
+                    <xs:element name="parent_company_website" />
+                    <xs:element name="address_1" />
+                    <xs:element name="address_2" />
+                    <xs:element name="city_town" />
+                    <xs:element name="state_province" />
+                    <xs:element name="postal_code" />
+                    <xs:element name="country" />
+                    <xs:element name="phone" />
+                    <xs:element name="fax" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="menus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="menu">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="menu_description" />
+                    <xs:element name="menu_note" />
+                    <xs:element name="menu_duration">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="menu_duration_name" />
+                          <xs:element name="menu_duration_time_start" />
+                          <xs:element name="menu_duration_time_end" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="menu_groups">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="menu_group">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="menu_group_description" />
+                                <xs:element name="menu_group_note" />
+                                <xs:element name="menu_items">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element maxOccurs="unbounded" name="menu_item">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="menu_item_name" type="xs:string" />
+                                            <xs:element name="menu_item_description" type="xs:string" />
+                                            <xs:element name="menu_item_price" type="xs:string" />
+                                          </xs:sequence>
+                                          <xs:attribute name="uid" type="xs:string" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" type="xs:string" use="required" />
+                              <xs:attribute name="uid" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="currency_symbol" type="xs:string" use="required" />
+                  <xs:attribute name="language" type="xs:string" use="required" />
+                  <xs:attribute name="uid" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="uuid" type="xs:string" use="required" />
+      <xs:attribute name="created_date" type="xs:date" use="required" />
+      <xs:attribute name="accuracy" type="xs:unsignedByte" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

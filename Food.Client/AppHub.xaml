@@ -1,0 +1,574 @@
+﻿<common:LayoutAwarePage x:Class="Microsoft.DPE.ReferenceApps.Food.Client.AppHub"
+    xmlns:Maps="using:Bing.Maps" x:Name="pageRoot" IsTabStop="false" mc:Ignorable="d"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft.DPE.ReferenceApps.Food.Client"
+    xmlns:common="using:Microsoft.DPE.ReferenceApps.Food.Client.Common"
+    xmlns:converters="using:Microsoft.DPE.ReferenceApps.Food.Lib.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.DPE.ReferenceApps.Food.Lib.Controls"
+    xmlns:usercontrols="using:Microsoft.DPE.ReferenceApps.Food.Client.Controls"
+    xmlns:types="using:Microsoft.DPE.ReferenceApps.Food.Lib.Models"
+    xmlns:models="using:Microsoft.DPE.ReferenceApps.Food.Client.ViewModels"
+    xmlns:Ads="using:Microsoft.Advertising.WinRT.UI"
+    xmlns:sample="using:Microsoft.DPE.ReferenceApps.Food.Client.Sample">
+
+    <d:Page.DataContext>
+        <sample:HubViewModel />
+    </d:Page.DataContext>
+
+    <Page.Resources>
+
+        <converters:NullVisibilityConverter x:Key="MyNullVisibilityConverter" />
+        <converters:HowManyMoreVisiblityConverter x:Key="MyHowManyMoreVisibilityConverter" />
+        <converters:ZeroVisibilityConverter x:Key="MyZeroVisibilityConverter" />
+        <converters:ParagraphConverter x:Key="MyParagraphConverter" />
+
+        <Style x:Key="RestuarantNameStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource AppPurpleBrush}" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontWeight" Value="ExtraBlack" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+
+        <Style x:Key="TitleLocationStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource AppBlackBrush}" />
+            <Setter Property="FontFamily" Value="Segoe UI Light" />
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>
+
+        <Style x:Key="RestuarantNameHeroStyle" TargetType="TextBlock" BasedOn="{StaticResource RestuarantNameStyle}">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="TextTrimming" Value="WordEllipsis" />
+        </Style>
+
+        <Style x:Key="AppTextNormalStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource AppBlackBrush}" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="FontSize" Value="11.4" />
+        </Style>
+
+        <Style x:Key="AppTextLightStyle" TargetType="TextBlock" BasedOn="{StaticResource AppTextNormalStyle}">
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="FontSize" Value="9.3" />
+        </Style>
+
+        <Style x:Key="AppTextDarkStyle" TargetType="TextBlock" BasedOn="{StaticResource AppTextNormalStyle}">
+            <Setter Property="FontWeight" Value="ExtraBold" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        
+        <Style x:Key="LocationAppBarButtonStyle" TargetType="Button" BasedOn="{StaticResource PinAppBarButtonStyle}">
+            <Setter Property="AutomationProperties.AutomationId" Value="LocationAppBarButton"/>
+            <Setter Property="AutomationProperties.Name" Value="Location"/>
+        </Style>
+
+        <!-- like: TRENDING RESTURANTS -->
+        <Style TargetType="TextBlock" x:Key="HubHeaderTextStyle">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontWeight" Value="ExtraBlack" />
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="Margin" Value="0,0,0,5" />
+        </Style>
+        
+        <!-- like: 13 MORE -->
+        <Style TargetType="Button" x:Key="HubMoreTextStyle">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="0,0,0,-5" />
+        </Style>
+
+        <!-- used in TRENDING, RECENT, FAVORITE -->
+        <DataTemplate x:Key="RestaurantRating150x20Template">
+            <usercontrols:RatingsControl Width="150" Height="20" StarColor="{StaticResource AppGreenColor}" StarBrush="{StaticResource AppGreenBrush}" RatingValue="{Binding AverageRating}" />
+        </DataTemplate>
+
+        <!-- used in NEAR ME -->
+        <DataTemplate x:Key="RestaurantRating150x15Template">
+            <usercontrols:RatingsControl Width="150" Height="15" StarColor="{StaticResource AppGreenColor}" StarBrush="{StaticResource AppGreenBrush}" RatingValue="{Binding AverageRating}" />
+        </DataTemplate>
+
+        <!-- used in RECENT, SURPRISE ME -->
+        <DataTemplate x:Key="ReviewRatingTemplate">
+            <usercontrols:RatingsControl Width="150" Height="15" StarColor="{StaticResource AppGreenColor}" StarBrush="{StaticResource AppGreenBrush}" RatingValue="{Binding Rating}" />
+        </DataTemplate>
+
+        <!-- used in TRENDING, FAVORITES -->
+        <DataTemplate x:Key="RestaurantHeroTemplate">
+            <Grid>
+                <Image Source="{Binding ImagePath}" Stretch="UniformToFill" />
+                <StackPanel Background="{StaticResource AppTransparentWhiteBrush}" VerticalAlignment="Bottom"
+                            Visibility="{Binding Converter={StaticResource MyNullVisibilityConverter}}">
+                    <StackPanel Margin="10">
+                        <!-- restaurant name -->
+                        <TextBlock Text="{Binding Name, Converter={StaticResource UpperCaseConverter}}"
+                                   Style="{StaticResource RestuarantNameHeroStyle}"
+                                   TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                        <!-- distance -->
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Style="{StaticResource AppTextDarkStyle}">
+                                <Run Text="{Binding Distance}" />&#160;miles
+                            </TextBlock>
+                            <!-- rating -->
+                            <ContentControl ContentTemplate="{StaticResource RestaurantRating150x20Template}" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        </StackPanel>
+                        <!-- address -->
+                        <TextBlock Style="{StaticResource AppTextNormalStyle}">
+                            <Run Text="{Binding Address}" />
+                            <LineBreak />
+                            <Run Text="{Binding City}" />, <Run Text="{Binding State}" /> <Run Text="{Binding Zip}" />
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <!-- used in TRENDING, FAVS -->
+        <DataTemplate x:Key="RestaurantNormalTemplate">
+            <Grid Visibility="{Binding Converter={StaticResource MyNullVisibilityConverter}}">
+                <d:Grid.DataContext>
+                    <sample:Restaurant />
+                </d:Grid.DataContext>
+                <Image Source="{Binding ImagePath}" Stretch="UniformToFill" />
+                <StackPanel VerticalAlignment="Bottom" Height="60" Background="{StaticResource AppTransparentWhiteBrush}">
+                    <StackPanel Margin="5">
+                        <!-- restaurant name -->
+                        <TextBlock Text="{Binding Name, Converter={StaticResource UpperCaseConverter}}"
+                                   MaxHeight="40"
+                                   Style="{StaticResource RestuarantNameStyle}"
+                                   TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                        <!-- distance -->
+                        <TextBlock Style="{StaticResource AppTextDarkStyle}"><Run Text="{Binding Distance}" />&#160;miles</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <!-- used in RECENT -->
+        <DataTemplate x:Key="RecentRestaurantTemplate">
+            <Grid Background="{StaticResource AppTransparentWhiteBrush}" Width="318" Height="208">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding ImagePath}" Width="110" Height="110" VerticalAlignment="Top" Stretch="UniformToFill" />
+                        <StackPanel VerticalAlignment="Top" Margin="10,0">
+                            <!-- restaurant name -->
+                                <TextBlock
+                                    Width="175"
+                                    Text="{Binding Name, Converter={StaticResource UpperCaseConverter}}"
+                                    Style="{StaticResource RestuarantNameStyle}" Margin="0,0,0,5"
+                                    TextWrapping="NoWrap" TextTrimming="WordEllipsis" />
+                            <!-- rating -->
+                            <ContentControl ContentTemplate="{StaticResource RestaurantRating150x20Template}" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            <!-- distance -->
+                            <TextBlock Text="{Binding PriceRange, Converter={StaticResource PriceRangeToDollarsConverter}}" Style="{StaticResource AppTextNormalStyle}" Foreground="{StaticResource AppGreenBrush}"/>
+                            <TextBlock Style="{StaticResource AppTextDarkStyle}">
+                                <Run Text="{Binding Distance}" />&#160;miles
+                            </TextBlock>
+                            <!-- address -->
+                            <TextBlock Style="{StaticResource AppTextNormalStyle}">
+                                <Run Text="{Binding Address}" />
+                                <LineBreak />
+                                <Run Text="{Binding City}" />, <Run Text="{Binding State}" /> <Run Text="{Binding Zip}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <!-- first rating -->
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <!-- author pic -->
+                        <Image Source="{Binding Reviews[0].ImagePath}" Width="33" Height="33" Stretch="UniformToFill" VerticalAlignment="Top" />
+                        <StackPanel Margin="5,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <!-- author name -->
+                                <TextBlock Text="{Binding Reviews[0].Author}" Margin="0,0,5,0" 
+                                           Style="{StaticResource AppTextLightStyle}" />
+                                <!-- windowsuixamlbindingwrapper is an RC bug -->
+                                <ContentControl DataContext="{Binding Reviews[0]}" ContentTemplate="{StaticResource ReviewRatingTemplate}" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </StackPanel>
+                            <!-- comment -->
+                            <TextBlock Text="{Binding Reviews[0].Comment, Converter={StaticResource MyParagraphConverter}}" 
+                                       Style="{StaticResource AppTextNormalStyle}" 
+                                       TextTrimming="WordEllipsis" MaxHeight="50"
+                                       Width="250" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <!-- used in NEARME -->
+        <DataTemplate x:Key="NearMeRestaurantTemplate">
+            <Grid Width="190" Height="98" Background="White">
+                <StackPanel Margin="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <!--<Image Source="{Binding ImagePath}" Height="78" Width="78" Stretch="UniformToFill" />-->
+                    <StackPanel Margin="10,0,0,0">
+                        <!-- restaurant name -->
+                        <TextBlock Style="{StaticResource RestuarantNameStyle}" Width="160" MaxHeight="50" TextWrapping="NoWrap" TextTrimming="WordEllipsis">
+                                <Run Text="{Binding Index}" />. <Run Text="{Binding Name, Converter={StaticResource UpperCaseConverter}}" />
+                        </TextBlock>
+                        <!-- distance -->
+                        <TextBlock Style="{StaticResource AppTextDarkStyle}"><Run Text="{Binding Distance}" />&#160;miles</TextBlock>
+                        <!-- rating -->
+                        <ContentControl ContentTemplate="{StaticResource RestaurantRating150x15Template}" VerticalAlignment="Center" Margin="0,0,0,0" />
+                        <!-- address -->
+                        <TextBlock Style="{StaticResource AppTextNormalStyle}">
+                                <Run Text="{Binding Address}" />
+                                <LineBreak />
+                                <Run Text="{Binding City}" />, <Run Text="{Binding State}" /> <Run Text="{Binding Zip}" />
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid Style="{StaticResource LayoutRootStyle}">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bg_01.jpg" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <!-- top -->
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <!-- body -->
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid Margin="100,0,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- back button (none in hub) -->
+            <Button x:Name="backButton" Click="GoBack" 
+                    IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" 
+                    Style="{StaticResource BackButtonStyle}" Visibility="Collapsed"/>
+
+            <!-- page title -->
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <!-- logo image -->
+                <Image Margin="0,0,20,0" Source="Assets/logo2_03.png" Stretch="None" VerticalAlignment="Bottom" />
+                <!-- location -->
+                <TextBlock x:Name="pageTitle" Style="{StaticResource TitleLocationStyle}" VerticalAlignment="Bottom">
+                    <Run>in</Run>
+                    <Run Text="{Binding Location}" />
+                </TextBlock>
+            </StackPanel>
+
+        </Grid>
+
+        <Viewbox Grid.Row="2" Name="vb1" VerticalAlignment="Bottom" Width="2340" Height="257">
+            <Image x:Name="ForksImage" Source="/Assets/forks-bottom_03.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" Stretch="None">
+                <Image.RenderTransform>
+                    <CompositeTransform TranslateX="{Binding ElementName=MainScroller, Path=HorizontalOffset, Converter={StaticResource ParallaxConverter}, ConverterParameter=-0.25}" />
+                </Image.RenderTransform>
+            </Image>
+        </Viewbox>
+        <ScrollViewer x:Name="MainScroller" Grid.Row="2" Style="{StaticResource HorizontalScrollViewerStyle}" 
+                      HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+            <StackPanel x:Name="MainPanel" Orientation="Horizontal" VerticalAlignment="Top">
+
+                <!-- trending -->
+                <StackPanel Margin="100,0,80,0">
+                    <!-- header -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource HubHeaderTextStyle}" Text="TRENDING RESTAURANTS" />
+                        <Button Style="{StaticResource HubMoreTextStyle}" Tapped="btnMoreTrending_Tapped_1" 
+                                Visibility="{Binding HowManyMoreTrending, Converter={StaticResource MyZeroVisibilityConverter}}">
+                            <TextBlock>
+                                <Run Text="{Binding HowManyMoreTrending}" /> MORE
+                            </TextBlock>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <!-- grid -->
+                        <Grid>
+                            <controls:VariableGridView ItemsSource="{Binding TrendingHub}" SelectionMode="None" IsItemClickEnabled="True" x:Name="TrendingGrid" ItemClick="Restaurant_ItemClick" Width="600" Height="450">
+                                <GridView.ItemTemplateSelector>
+                                    <controls:FirstItemTemplateSelector
+                                    FirstDataTemplate="{StaticResource RestaurantHeroTemplate}"
+                                    OtherDataTemplate="{StaticResource RestaurantNormalTemplate}" />
+                                </GridView.ItemTemplateSelector>
+                                <GridView.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VariableSizedWrapGrid Orientation="Vertical" ItemHeight="1" ItemWidth="1" />
+                                    </ItemsPanelTemplate>
+                                </GridView.ItemsPanel>
+                            </controls:VariableGridView>
+                            <TextBlock 
+                                Text="No Results"
+                                Visibility="{Binding TrendingHub, Converter={StaticResource MyZeroVisibilityConverter}, ConverterParameter='Visible'}"/>
+                            <ProgressRing IsActive="True" Height="400" Width="400" Visibility="{Binding ProgressBarVisibility}">
+                                <ProgressRing.RenderTransform>
+                                    <ScaleTransform ScaleX=".25" ScaleY=".25" />
+                                </ProgressRing.RenderTransform>
+                            </ProgressRing>
+                        </Grid>
+                        <!-- Ad -->
+                        <Ads:AdControl
+                            VerticalAlignment="Top"
+                            Margin="5,5,0,0"
+                            Width="300"
+                            Height="250"
+                            AdUnitId="10043057"
+                            ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" />
+                    </StackPanel>
+
+                </StackPanel>
+
+                <!-- recent -->
+                <StackPanel Margin="0,0,80,0">
+
+                    <!-- header -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource HubHeaderTextStyle}" Text="RECENTLY REVIEWED" />
+                        <Button Style="{StaticResource HubMoreTextStyle}" Tapped="btnMoreRecent_Tapped_1"
+                            Visibility="{Binding HowManyMoreRecent, Converter={StaticResource MyZeroVisibilityConverter}}">
+                            <TextBlock>
+                                <Run Text="{Binding HowManyMoreRecent}" /> MORE
+                            </TextBlock>
+                        </Button>
+                    </StackPanel>
+
+                    <!-- grid -->
+                    <Grid>
+                        <GridView ItemsSource="{Binding RecentHub}" SelectionMode="None" IsItemClickEnabled="True"
+                              x:Name="RecentGrid" ItemClick="Restaurant_ItemClick" ItemTemplate="{StaticResource RecentRestaurantTemplate}">
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid Orientation="Vertical" MaximumRowsOrColumns="2" />
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                        </GridView>
+                        <TextBlock 
+                            Text="No Results"
+                            Visibility="{Binding RecentHub, Converter={StaticResource MyZeroVisibilityConverter}, ConverterParameter='Visible'}"/>
+                        <ProgressRing IsActive="True" Height="400" Width="400" Visibility="{Binding ProgressBarVisibility}">
+                            <ProgressRing.RenderTransform>
+                                <ScaleTransform ScaleX=".25" ScaleY=".25" />
+                            </ProgressRing.RenderTransform>
+                        </ProgressRing>
+                    </Grid>
+
+                </StackPanel>
+
+                <!-- nearme -->
+                <StackPanel Margin="0,0,80,0">
+
+                    <!-- header -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource HubHeaderTextStyle}" Text="TOP NEAR ME" />
+                        <Button Style="{StaticResource HubMoreTextStyle}" Tapped="btnMoreNearMe_Tapped_1"
+                            Visibility="{Binding HowManyMoreNearMe, Converter={StaticResource MyZeroVisibilityConverter}}">VIEW ALL</Button>
+                    </StackPanel>
+
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+
+                            <!-- map image/button -->
+                            <Button Style="{StaticResource ImageBtnStyle}" VerticalAlignment="Top" 
+                                    Margin="0,5,0,0" Height="421" Tapped="MapImage_Tapped_1"
+                                    Content="{Binding StaticMapUri}" />
+
+                            <!-- list -->
+                            <ListView ItemsSource="{Binding NearMeHub}" SelectionMode="None" ItemTemplate="{StaticResource NearMeRestaurantTemplate}"
+                                  IsItemClickEnabled="True" x:Name="NearMeGrid" ItemClick="Restaurant_ItemClick">
+                            </ListView>
+
+                        </StackPanel>
+                        <TextBlock 
+                            Text="No Results" 
+                            Visibility="{Binding NearMeHub, Converter={StaticResource MyZeroVisibilityConverter}, ConverterParameter='Visible'}"/>
+                        <ProgressRing IsActive="True" Height="400" Width="400" Visibility="{Binding ProgressBarVisibility}">
+                            <ProgressRing.RenderTransform>
+                                <ScaleTransform ScaleX=".25" ScaleY=".25" />
+                            </ProgressRing.RenderTransform>
+                        </ProgressRing>
+                    </Grid>
+
+                </StackPanel>
+
+                <!-- favorites -->
+                <StackPanel Margin="0,0,80,0">
+
+                    <!-- header -->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource HubHeaderTextStyle}" Text="FAVORITES" />
+                        <Button Style="{StaticResource HubMoreTextStyle}" Tapped="btnMoreFavorites_Tapped_1">VIEW ALL</Button>
+                    </StackPanel>
+
+                    <!-- grid -->
+
+                    <Grid>
+                        <controls:VariableGridView ItemsSource="{Binding FavoritesHub}" SelectionMode="None" IsItemClickEnabled="True" x:Name="FavoritesGrid" ItemClick="Restaurant_ItemClick" Height="450" Width="500">
+                            <GridView.ItemTemplateSelector>
+                                <controls:FirstItemTemplateSelector
+                                FirstDataTemplate="{StaticResource RestaurantHeroTemplate}"
+                                OtherDataTemplate="{StaticResource RestaurantNormalTemplate}" />
+                            </GridView.ItemTemplateSelector>
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VariableSizedWrapGrid Orientation="Vertical" ItemHeight="1" ItemWidth="1" />
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                        </controls:VariableGridView>
+                        <TextBlock 
+                        Text="No Results"
+                        Visibility="{Binding FavoritesHub, Converter={StaticResource MyZeroVisibilityConverter}, ConverterParameter='Visible'}"/>
+                    </Grid>
+                </StackPanel>
+
+                <!-- surprise me -->
+                <StackPanel Margin="0,0,100,0">
+
+                    <!-- header -->
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="SURPRISE ME" Style="{StaticResource SectionHeaderMoreStyle}" Click="SurpriseMeButton_Click"/>
+                    </StackPanel>
+
+                    <!-- grid -->
+                    <Grid Height="430" Width="310">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Button Style="{StaticResource BorderlessContentBtnStyle}" Click="SurpriseMeRestaurant_Click">
+                            <Grid DataContext="{Binding SurpriseMeRestaurant}">
+                                <Image Source="{Binding ImagePath}" Stretch="UniformToFill" />
+                                <StackPanel 
+                                    Background="{StaticResource AppTransparentWhiteBrush}" 
+                                    VerticalAlignment="Bottom"
+                                    Visibility="{Binding Converter={StaticResource MyNullVisibilityConverter}}">
+                                    <StackPanel Margin="10">
+                                        <!-- restaurant name -->
+                                        <TextBlock Text="{Binding Name, Converter={StaticResource UpperCaseConverter}}"
+                                            Style="{StaticResource RestuarantNameHeroStyle}"
+                                            TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                                        <!-- distance -->
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Style="{StaticResource AppTextDarkStyle}">
+                                            <Run Text="{Binding Distance}" />&#160;miles
+                                            </TextBlock>
+                                            <!-- rating -->
+                                            <ContentControl ContentTemplate="{StaticResource RestaurantRating150x20Template}" VerticalAlignment="Center" Margin="10,0,0,0" />
+                                        </StackPanel>
+                                        <!-- address -->
+                                        <TextBlock Style="{StaticResource AppTextNormalStyle}">
+                                            <Run Text="{Binding Address}" />
+                                            <LineBreak />
+                                            <Run Text="{Binding City}" />, <Run Text="{Binding State}" /> <Run Text="{Binding Zip}" />
+                                        </TextBlock>
+                                        <TextBlock Text="{Binding Phone, Converter={StaticResource PhoneNumberFormattingConverter}}" Style="{StaticResource AppTextNormalStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Button>
+                        <!-- first rating -->
+                        <StackPanel DataContext="{Binding SurpriseMeRestaurant.Reviews[0]}" Background="White" Grid.Row="1">
+                            <StackPanel Orientation="Horizontal" Margin="10">
+                                <!-- author pic -->
+                                <Image Source="{Binding ImagePath}" Width="33" Height="33" Stretch="UniformToFill" VerticalAlignment="Top" />
+                                <StackPanel Margin="5,0,0,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <!-- author name -->
+                                        <TextBlock Text="{Binding Author}" Margin="0,0,5,0" 
+                                                Style="{StaticResource AppTextLightStyle}" />
+                                        <!-- windowsuixamlbindingwrapper is an RC bug -->
+                                        <ContentControl DataContext="{Binding}" ContentTemplate="{StaticResource ReviewRatingTemplate}" VerticalAlignment="Center" Margin="0,0,0,0" />
+                                    </StackPanel>
+                                    <!-- comment -->
+                                    <TextBlock Text="{Binding Comment, Converter={StaticResource MyParagraphConverter}}" 
+                                                Style="{StaticResource AppTextNormalStyle}" 
+                                                TextTrimming="WordEllipsis" MaxHeight="50"
+                                                Width="250" TextWrapping="Wrap" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <Image Stretch="None" Source="Assets/ribbon_03.png" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="{Binding MotionSupported, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </Grid>
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <Popup IsOpen="False" x:Name="SetLocationFlyout">
+            <Popup.Child>
+                <flyouts:SetLocation x:Name="SetLocationControl"
+                            xmlns:flyouts="using:Microsoft.DPE.ReferenceApps.Food.Client.Flyouts" 
+                            Height="270" Width="350" />
+            </Popup.Child>
+        </Popup>
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <VisualState x:Name="FullScreenPortrait">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <!-- The back button and title have different styles when snapped -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainScroller" Storyboard.TargetProperty="Style">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource VerticalScrollViewerStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainPanel" Storyboard.TargetProperty="Orientation">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Vertical"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    </Grid>
+
+    <!-- App Bar -->
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar1" Padding="10,0,10,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" Visibility="Collapsed">
+                </StackPanel>
+                <StackPanel x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <Button x:Name="LocationButton" Style="{StaticResource EditAppBarButtonStyle}" Click="LocationButton_Click" AutomationProperties.Name="Set Location"/>
+                    <Button x:Name="RefreshButton" Style="{StaticResource RefreshAppBarButtonStyle}" Click="RefreshButton_Click_1"/>
+                    <!--<Button x:Name="SurpriseMeButton" Style="{StaticResource SettingsAppBarButtonStyle}" Click="SurpriseMeButton_Click" />-->
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+</common:LayoutAwarePage>

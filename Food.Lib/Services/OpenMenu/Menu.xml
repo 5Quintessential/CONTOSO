@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<omf uuid="20f18b14-15bb-11e0-b40e-0018512e6b26" created_date="2010-03-25" accuracy="5">
+  <openmenu>
+    <version>1.6</version>
+    <crosswalks>
+      <crosswalk>
+        <crosswalk_id>c2b822ad-3e5b-4998-89ad-8354b668536a</crosswalk_id>
+        <crosswalk_company>Factual</crosswalk_company>
+        <crosswalk_url>http://factual.com/c2b822ad-3e5b-4998-89ad-8354b668536a</crosswalk_url>
+      </crosswalk>
+    </crosswalks>
+  </openmenu>
+
+  <openmenu><version>1.6</version><crosswalks><crosswalk><crosswalk_id>c2b822ad-3e5b-4998-89ad-8354b668536a</crosswalk_id><crosswalk_company>Factual</crosswalk_company><crosswalk_url>http://factual.com/c2b822ad-3e5b-4998-89ad-8354b668536a</crosswalk_url></crosswalk></crosswalks></openmenu>
+
+  <restaurant_info>
+    <restaurant_name>Basil T's</restaurant_name>
+    <business_type>independent</business_type>
+    <brief_description></brief_description>
+    <full_description></full_description>
+    <location_id></location_id>
+    <mobile></mobile>
+    <longitude>-74.075405</longitude>
+    <latitude>40.3536</latitude>
+    <utc_offset></utc_offset>
+    <address_1>183 Riverside Ave.</address_1>
+    <address_2>(Maple Ave.)</address_2>
+    <city_town>Red Bank</city_town>
+    <state_province>NJ</state_province>
+    <postal_code>07701</postal_code>
+    <country>US</country>
+    <region_area></region_area>
+    <phone>732-842-5990</phone>
+    <fax>842-8675</fax>
+    <website_url>http://www.basilt.com</website_url>
+    <omf_file_url>http://openmenu.com/menu/20f18b14-15bb-11e0-b40e-0018512e6b26</omf_file_url>
+    <logo_urls>
+    </logo_urls>
+    <environment>
+      <seating_qty></seating_qty>
+      <max_group_size></max_group_size>
+      <age_level_preference></age_level_preference>
+      <smoking_allowed></smoking_allowed>
+      <takeout_available></takeout_available>
+      <delivery_available radius="" fee=""></delivery_available>
+      <catering_available></catering_available>
+      <reservations></reservations>
+      <alcohol_type></alcohol_type>
+      <music_type></music_type>
+      <pets_allowed></pets_allowed>
+      <wheelchair_accessible></wheelchair_accessible>
+      <dress_code>Casual</dress_code>
+      <cuisine_type_primary>American (Traditional), Italian</cuisine_type_primary>
+      <cuisine_type_secondary></cuisine_type_secondary>
+      <seating_locations>
+      </seating_locations>
+      <accepted_currencies>
+      </accepted_currencies>
+      <online_reservations>
+      </online_reservations>
+      <online_ordering>
+      </online_ordering>
+      <operating_days>
+        <operating_day>
+          <day_of_week>1</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>22:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>2</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>22:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>3</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>22:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>4</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>22:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>5</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>23:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>6</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>23:00</close_time>
+        </operating_day>
+        <operating_day>
+          <day_of_week>7</day_of_week>
+          <open_time>11:30</open_time>
+          <close_time>22:00</close_time>
+        </operating_day>
+      </operating_days>
+      <parking></parking>
+    </environment>
+    <contacts>
+    </contacts>
+    <parent_company>
+      <parent_company_name></parent_company_name>
+      <parent_company_website></parent_company_website>
+      <address_1></address_1>
+      <address_2></address_2>
+      <city_town></city_town>
+      <state_province></state_province>
+      <postal_code></postal_code>
+      <country></country>
+      <phone></phone>
+      <fax></fax>
+    </parent_company>
+  </restaurant_info>
+  <menus>
+    <menu name="LUNCH MENU" currency_symbol="" language="" uid="3e400926-27f2-11e1-80ac-00163eeae34c">
+      <menu_description></menu_description>
+      <menu_note></menu_note>
+      <menu_duration>
+        <menu_duration_name></menu_duration_name>
+        <menu_duration_time_start></menu_duration_time_start>
+        <menu_duration_time_end></menu_duration_time_end>
+      </menu_duration>
+      <menu_groups>
+        <menu_group name="ANTIPASTI" uid="3eb4f588-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422aaff0-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SUPREMA</menu_item_name>
+              <menu_item_description>FRATELLI GALLONI PROSCIUTTO DI PARMA, SALUMERIA BIELLESE SOPPRESATA, GENOA SALAMI &amp; AIR CURED BREASOLA, BELLA CERGINOLA OLIVES, HOUSE ROASTED PEPPERS, REGGIANO-PARMIGIANO, AND TUSCAN TOAST</menu_item_description>
+              <menu_item_price></menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab02c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PROSCIUTTO</menu_item_name>
+              <menu_item_description>18 MONTH AGED FRATELLI GALLONI PROSCIUTTO DI PARMA, AGED PARMIGIANO-REGGIANO, BELLA CERGINOLA OLIVES</menu_item_description>
+              <menu_item_price>15.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab072-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>FORMAGGIO</menu_item_name>
+              <menu_item_description>COACH FARMS TRIPLE CREAM GOAT CHEESE, NY STATE - - PODDA CLASSICO SARDINIA, ITALY - - PARMIGIANO-REGGIANO ITALY - - CASTEL ROSSO PIEMONTE, ITALY - - PECORINO SIENA SIENA, ITALY-SERVED WITH LOCAL HONEY</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab0b8-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ARUGULA</menu_item_name>
+              <menu_item_description>WILD ARUGULA, NAVEL ORANGE, CRISPY CALAMARI, HEARTS OF PALM, CALAMATA OLIVES &amp; CITRUS OLIO</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab0f4-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CAESAR</menu_item_name>
+              <menu_item_description>ROMAINE HEARTS, HOMEMADE CROUTONS, PARMIGIANO-REGGIANO, CAESAR DRESSING IN THE WOODEN BOWL</menu_item_description>
+              <menu_item_price>12.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab13a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BELLA CERGINOLA OLIVES</menu_item_name>
+              <menu_item_description>EXTRA VIRGIN OLIVE OIL &amp; LEMON ZEST</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab176-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ARTESIAN BREAD</menu_item_name>
+              <menu_item_description>ITALIAN WHOLE WHEAT, CIABATTA, AND CRANBERRY NUT BREADS</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab1bc-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MESCULINO</menu_item_name>
+              <menu_item_description>BABY GREENS, FAVA BEANS, TOASTED PIGNOLI, BALSAMIC VINAIGRETTE, AURICCHIO PROVOLONE, TUSCAN TOAST</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab202-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CALAMARI FRITTI</menu_item_name>
+              <menu_item_description>CRISPY CALAMARI, HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab23e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ROASTED ALMONDS</menu_item_name>
+              <menu_item_description>LIGHTLY TOASTED, WITH SEA SALT AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab284-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZUPPA</menu_item_name>
+              <menu_item_description>PISELLI AND PANCETTA</menu_item_description>
+              <menu_item_price>6.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PIZZA &amp; CALZONE" uid="3eb4f5ba-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ab2c0-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>NAPOLETANA</menu_item_name>
+              <menu_item_description>MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, PARMIGIANO-REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab306-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MARGHERITA</menu_item_name>
+              <menu_item_description>HANDROLLED MOZZARELLA, FRESH TOMATO AND BASIL, PARMIGIANO-REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab342-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SALSICCIA</menu_item_name>
+              <menu_item_description>ITALIAN SWEET FENNEL SAUSAGE, PEPPERS, SPANISH ONION, MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab388-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BIANCO</menu_item_name>
+              <menu_item_description>RICOTTA, MOZZARELLA AND PROVOLONE CHEESES, EXTRA VIRGIN OLIVE OIL AND PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab3ce-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZUCCO E FUNGHI</menu_item_name>
+              <menu_item_description>GRATED ZUCCHINI, SHAVED PORTOBELLA, MOZZARELLA AND PROVOLONE CHEESE, SWEET ONION, TOASTED BREAD CRUMBS</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab40a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MELANZANE</menu_item_name>
+              <menu_item_description>CRISPY EGGPLANT, MOZZARELLA AND PROVOLONE CHEESES, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL, PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab450-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>QUATTRO FORMAGGIO CALZONE</menu_item_name>
+              <menu_item_description>CRISPY HOMEMADE PIZZA DOUGH, RICOTTA, PROVOLONE, MOZZARELLA AND PARMIGIANO CHEESES HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>9.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab4a0-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PROSCIUTTO CALZONE</menu_item_name>
+              <menu_item_description>PROSCIUTTO DI PARMA, CRISPY PIZZA DOUGH, RICOTTA CHEESE AND HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>9.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PANINI" uid="3eb4f5f6-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ab4dc-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BURGER PANINI</menu_item_name>
+              <menu_item_description>CHAR GRILLED LEAN BEEF, HOUSE MADE FOCCACIO ROLL, CRISPY FRENCH FRIES</menu_item_description>
+              <menu_item_price>11.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab522-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CHICKEN RAPINI</menu_item_name>
+              <menu_item_description>GRILLED CHICKEN BREAST, SAUTE' BROCCOLI RABE, HOUSE MADE FOCCACIO ROLL, CRISPY FRENCH FRIES</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab568-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CAPRESE</menu_item_name>
+              <menu_item_description>PROSCIUTTO DI PARMA, MOZZARELLA, VINE RIPE TOMATO, ARUGULA EXTRA VIRGIN OIL, GRILLED TUSCAN BREAD</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab5a4-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>FIASCO</menu_item_name>
+              <menu_item_description>HERB CRUSTED CHICKEN, GRILLED EGGPLANT, ROASTED PEPPER, FRESH MOZZARELLA, PESTO, ARUGULA PRESSED ON CRISPY TUSCAN BREAD</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab5ea-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>AL FRESCA</menu_item_name>
+              <menu_item_description>ROASTED PEPPER, GRILLED EGGPLANT &amp; ZUCCHINI, RED ONION, MOZZARELLA, PESTO, CRISPY TUSCAN BREAD</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab630-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MILANESE</menu_item_name>
+              <menu_item_description>GOLDEN FRIED CHICKEN BREAST, MESCULINO, RED ONION, BALSAMIC VINAIGRETTE, CRISPY TUSCAN BREAD</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PASTA &amp; PIATTI DEL GIORNO" uid="3eb4f628-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ab66c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PASTA E FAGIOLI</menu_item_name>
+              <menu_item_description>FAGIOLATTI &amp; CECI BEANS, PROSCIUTTO DI PARMA, SAN MARZANO TOMATOES, GARLIC, BASIL, &amp; EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab6b2-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>GNOCCHI POMMODORO</menu_item_name>
+              <menu_item_description>FRESH TOMATOES, HOUSE MADE GNOCCHI, FRESH ZUCCHINI &amp; GARLIC, SICILIA MADRE VIRGIN OLIVE OIL, PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab6ee-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SPAGHETTI RAPINI PESTO</menu_item_name>
+              <menu_item_description>BROCCOLI RABE PESTO, PIGNOLI NUTS, PARMIGIANO-REGGIANO, &amp; SICILIAN EXTRA VIRGIN OLIVE OIL, HOUSE MADE SPAGHETTI</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab734-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RAVIOLI</menu_item_name>
+              <menu_item_description>HOUSE MADE FOUR CHEESE, RICOTTA, CREAMY GOAT, MASCARPONE &amp; FRESH MOZZARELLA CHEESES WITH FRESH TOMATO SAUCE SWEET PEAS &amp; REGGIANO-PARMIGIANO</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab77a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RIGATONI</menu_item_name>
+              <menu_item_description>HOUSE MADE RIGATONI, BROCCOLI RABE, SWEET ITALIAN SAUSAGE, POMMODORO FRESCA, GARLIC, AND TOASTED BREAD CRUMBS</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab7b6-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RIGATONI MELANZANE</menu_item_name>
+              <menu_item_description>HOUSE MADE RIGATONI, HOMEMADE TOMATO SAUCE, FRESH MOZZARELLA, CRISP EGGPLANT, AND PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab7fc-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZITI</menu_item_name>
+              <menu_item_description>OVEN BAKED HOUSE MADE ZITI PASTA WITH FILETTO SAUCE, FRESH GRATED MOZZAERLLA, HOUSE MADE MEATBALL AND JULIENNE FRESH BASIL</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab838-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BOLOGNESE</menu_item_name>
+              <menu_item_description>HOUSE MADE RUFFLED PAPPARDELLE, VEAL, BEEF AND PORK MEAT SAUCE, WITH MASCARPONE CHEESE AND SHAVED PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab87e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SPAGHETTINI VONGOLE</menu_item_name>
+              <menu_item_description>SIMPLE AND CLASSIC, FRESH CLAMS, GARLIC, EXTRA VIRGIN OLIVE OIL, ITALIAN PARSLEY AND CHILIS OVER HOUSE MADE SPAGHETTINI</menu_item_description>
+              <menu_item_price>15.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab8c4-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PUTTANESCA</menu_item_name>
+              <menu_item_description>POMMODORO FRESCA, GARLIC, CAPERS, CALAMATA OLIVES AND A HINT OF ANCHOIVIE OVER HOUSE MADE PENNE PASTA</menu_item_description>
+              <menu_item_price>13.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab900-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>FREST HALIBUT LIVORNESE</menu_item_name>
+              <menu_item_description>FRESH NEW ENGLAND HALIBUT, FRESH TOMATOES, CAPERS, GARLIC, CALAMATA OLIVES, SPAGHETTINI MILANESE</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab946-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SOLE FRANCESE</menu_item_name>
+              <menu_item_description>FRESH HAND CUT SOLE, PRESERVED LEMON &amp; CAPER BERRIES WHITE WINE, CREAMY SPINACH RISOTTO</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ab982-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SAUSAGE &amp; CHICKEN SCARPIELLO</menu_item_name>
+              <menu_item_description>ROASTED SWEET ITALIAN FENNEL SAUSAGE, CHERRY PEPPERS, WINE VINEGAR, EXTRA VIRGIN OLIVE OIL, CAPERS, FINGERLING POTATO AND RAPINI</menu_item_description>
+              <menu_item_price>15.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="CONTORNI" uid="3eb4f65a-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ab9c8-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MEATBALLS</menu_item_name>
+              <menu_item_description>TWO MEATBALLS &quot;BIG VIC'S&quot; RECIPE, HOMEMADE TOMATO SAUCE</menu_item_description>
+              <menu_item_price>6.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422aba0e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ESCAROLA</menu_item_name>
+              <menu_item_description>GARLIC AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422aba4a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BROCCOLI RABE</menu_item_name>
+              <menu_item_description>GARLIC AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>7.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+      </menu_groups>
+    </menu>
+    <menu name="DINNER MENU" currency_symbol="" language="" uid="3e400958-27f2-11e1-80ac-00163eeae34c">
+      <menu_description></menu_description>
+      <menu_note></menu_note>
+      <menu_duration>
+        <menu_duration_name></menu_duration_name>
+        <menu_duration_time_start></menu_duration_time_start>
+        <menu_duration_time_end></menu_duration_time_end>
+      </menu_duration>
+      <menu_groups>
+        <menu_group name="ANTIPASTI" uid="3eb4f68c-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422aba90-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SUPREMA</menu_item_name>
+              <menu_item_description>FRATELLI GALLONI PROSCIUTTO DI PARMA, SALUMERIA BIELLESE SOPPRESATA, GENOA SALAMI &amp; AIR CURED BREASOLA, BELLA CERGINOLA OLIVES, HOUSE ROASTED PEPPERS, REGGIANO-PARMIGIANO, AND TUSCAN TOAST</menu_item_description>
+              <menu_item_price></menu_item_price>
+            </menu_item>
+            <menu_item uid="422abad6-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PROSCIUTTO</menu_item_name>
+              <menu_item_description>18 MONTH AGED FRATELLI GALLONI PROSCIUTTO DI PARMA, AGED PARMIGIANO-REGGIANO, BELLA CERGINOLA OLIVES</menu_item_description>
+              <menu_item_price>15.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abb1c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>FORMAGGIO</menu_item_name>
+              <menu_item_description>COACH FARMS TRIPLE CREAM GOAT CHEESE, NY STATE- - PODDA CLASSICO, SARDINIA, ITALY - - PARMIGIANO-REGGIANO, ITALY - - CASTEL ROSSO, PIEMONTE, ITALY - - PECORINO SIENA, SIENA, ITALY-SERVED WITH LOCAL HONEY</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abb62-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ARUGULA</menu_item_name>
+              <menu_item_description>WILD ARUGULA, NAVEL ORANGE, CRISPY CALAMARI, HEARTS OF PALM, CALAMATA OLIVES &amp; CITRUS OLIO</menu_item_description>
+              <menu_item_price>14.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abb9e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CAESAR</menu_item_name>
+              <menu_item_description>ROMAINE HEARTS, HOMEMADE CROUTONS, PARMIGIANO-REGGIANO, CAESAR DRESSING IN THE WOODEN BOWL</menu_item_description>
+              <menu_item_price>12.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abbe4-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BELLA CERGINOLA OLIVES</menu_item_name>
+              <menu_item_description>EXTRA VIRGIN OLIVE OIL &amp; LEMON ZEST</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abc20-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ARTESIAN BREAD</menu_item_name>
+              <menu_item_description>ITALIAN WHOLE WHEAT, CIABATTA, AND CRANBERRY NUT BREADS</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abc66-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MESCULINO</menu_item_name>
+              <menu_item_description>BABY GREENS, FAVA BEANS, TOASTED PIGNOLI, BALSAMIC VINAIGRETTE, AURICCHIO PROVOLONE, TUSCAN TOAST</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abcac-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CALAMARI FRITTI</menu_item_name>
+              <menu_item_description>CRISPY CALAMARI, HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abce8-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ROASTED ALMONDS</menu_item_name>
+              <menu_item_description>LIGHTLY TOASTED, WITH SEA SALT AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abd2e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZUPPA</menu_item_name>
+              <menu_item_description>PISELLI AND PANCETTA</menu_item_description>
+              <menu_item_price>6.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PIZZA &amp; PANINI" uid="3eb4f6be-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422abd6a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>NAPOLETANA</menu_item_name>
+              <menu_item_description>MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, PARMIGIANO-REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abdb0-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MARGHERITA</menu_item_name>
+              <menu_item_description>HANDROLLED MOZZARELLA, FRESH TOMATO AND BASIL, PARMIGIANO REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abe8c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SALSICCIA</menu_item_name>
+              <menu_item_description>ITALIAN SWEET FENNEL SAUSAGE, PEPPERS, SPANISH ONION, MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abed2-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BIANCO</menu_item_name>
+              <menu_item_description>RICOTTA, MOZZARELLA AND PROVOLONE CHEESES, EXTRA VIRGIN OLIVE OIL AND PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abf18-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZUCCO E FUNGHI</menu_item_name>
+              <menu_item_description>GRATED ZUCCHINI, SHAVED PORTOBELLA, MOZZARELLA AND PROVOLONE CHEESE, SWEET ONION, TOASTED BREAD CRUMBS</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abf54-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MELANZANE</menu_item_name>
+              <menu_item_description>CRISPY EGGPLANT, MOZZARELLA AND PROVOLONE CHEESES, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL, PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abf9a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BURGER PANINI</menu_item_name>
+              <menu_item_description>CHAR GRILLED LEAN BEEF, HOUSE MADE FOCCACIO ROLL, CRISPY FRENCH FRIES</menu_item_description>
+              <menu_item_price>11.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422abfd6-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CHICKEN RAPINI</menu_item_name>
+              <menu_item_description>GRILLED CHICKEN BREAST, SAUTE' BROCCOLI RABE, HOUSE MADE FOCCACIO ROLL, CRISPY FRENCH FRIES</menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PASTA" uid="3eb4f6fa-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ac01c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PASTA E FAGIOLI</menu_item_name>
+              <menu_item_description>FAGIOLATTI &amp; CECI BEANS, PROSCIUTTO DI PARMA, SAN MARZANO TOMATOES, GARLIC, BASIL, &amp; EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac058-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>GNOCCHI</menu_item_name>
+              <menu_item_description>FRESH TOMATOES, HOUSE MADE GNOCCHI, FRESH ZUCCHINI &amp; GARLIC, SICILIA MADRE VIRGIN OLIVE OIL, PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>18.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac09e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SPAGHETTI RAPINI PESTO</menu_item_name>
+              <menu_item_description>BROCCOLI RABE PESTO, PIGNOLI NUTS, PARMIGIANO-REGGIANO, &amp; SICILIAN OLIVE OIL SERVED OVER HOUSE MADE SPAGHETTI</menu_item_description>
+              <menu_item_price>19.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac0da-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RAVIOLI</menu_item_name>
+              <menu_item_description>HOUSE MADE WITH RICOTTA, MASCARPONE, GOAT, AND MOZZARELLA CHEESES, POMMODORO FRESCA &amp; SWEET PEAS</menu_item_description>
+              <menu_item_price>21.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac120-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RIGATONI</menu_item_name>
+              <menu_item_description>HOUSE MADE RIGATONI, SWEET ITALIAN SAUSAGE, BROCCOLI RABE, FRESH TOMATOES, GARLIC, AND TOASTED BREAD CRUMBS</menu_item_description>
+              <menu_item_price>21.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac15c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>RIGATONI MELANZANE</menu_item_name>
+              <menu_item_description>HOUSE MADE RIGATONI, HOMEMADE TOMATO SAUCE, FRESH MOZZARELLA, CRISP EGGPLANT, AND PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>19.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac1a2-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZITI</menu_item_name>
+              <menu_item_description>OVEN BAKED, HOUSE MADE ZITI WITH FILETTO SAUCE, FRESH GRATED MOZZARELLA, HOMEMADE MEATBALL AND JULIENNE FRESH BASIL</menu_item_description>
+              <menu_item_price>20.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac1f2-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BOLOGNESE</menu_item_name>
+              <menu_item_description>HOUSE MADE RUFFLED PAPPARDELLE, VEAL, BEEF AND PORK MEAT SAUCE, WITH MASCARPONE CHEESE AND SHAVED PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>22.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac22e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SPAGHETTINI VONGOLE</menu_item_name>
+              <menu_item_description>SIMPLE AND CLASSIC, FRESH CLAMS, GARLIC, EXTRA VIRGIN OLIVE OIL, ITALIAN PARSLEY AND CHILIS OVER HOUSE MADE SPAGHETTINI</menu_item_description>
+              <menu_item_price>24.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac274-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PUTTANESCA</menu_item_name>
+              <menu_item_description>POMMODORO FRESCA, GARLIC, CAPERS, CALAMATA OLIVES AND A HINT OF ANCHOVIE OVER HOUSE MADE PENNE PASTA</menu_item_description>
+              <menu_item_price>18.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="PIATTI DEL GIORNO" uid="3eb4f72c-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ac2b0-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>FRESH HALIBUT LIVORNESE</menu_item_name>
+              <menu_item_description>FRESH NEW ENGLAND HALIBUT, FRESH TOMATOES, CAPERS, GARLIC, CALAMATA OLIVES, SPAGHETTINI MILANESE</menu_item_description>
+              <menu_item_price>27.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac2f6-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SOLE FRANCESE</menu_item_name>
+              <menu_item_description>FRESH HAND CUT SOLE, PRESERVED LEMON &amp; WHITE WINE, CAPER BERRIES AND CREAMY SPINACH RISOTTO</menu_item_description>
+              <menu_item_price>25.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac33c-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CHICKEN SALTIMBOCA</menu_item_name>
+              <menu_item_description>BELL AND EVANS CHICKEN BREAST, PROSCIUTTO DI PARMA, FRESH SAGE, MADEIRA WINE, SAUTÉ ESCAROLE, CRISPY POTATOES</menu_item_description>
+              <menu_item_price>23.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac3dc-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SAUSAGE &amp; CHICKEN SCARPIELLO</menu_item_name>
+              <menu_item_description>CHERRY PEPPERS, RED WINE, ITALIAN VINEGAR, EXTRA VIRGIN OLIVE OIL, CAPERS, FINGERLING POTATO AND RAPINI</menu_item_description>
+              <menu_item_price>24.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac422-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BISTECCA</menu_item_name>
+              <menu_item_description>20 OUNCE GRILLED PORTERHOUSE STEAK, WITH BROCCOLI REBE FLOWERS &amp; HOUSEMADE PENNE PASTA WITH FRESH TOMATO SAUCE</menu_item_description>
+              <menu_item_price>37.00</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="CONTORNI" uid="3eb4f75e-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ac468-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MEATBALLS</menu_item_name>
+              <menu_item_description>TWO MEATBALLS &quot;BIG VIC'S&quot; RECIPE, HOMEMADE TOMATO SAUCE</menu_item_description>
+              <menu_item_price>6.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac4a4-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ESCAROLA</menu_item_name>
+              <menu_item_description>GARLIC AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>5.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac4ea-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BROCCOLI RABE</menu_item_name>
+              <menu_item_description>GARLIC AND EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>7.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+      </menu_groups>
+    </menu>
+    <menu name="LATE NITE MENU" currency_symbol="" language="" uid="3e400994-27f2-11e1-80ac-00163eeae34c">
+      <menu_description></menu_description>
+      <menu_note></menu_note>
+      <menu_duration>
+        <menu_duration_name></menu_duration_name>
+        <menu_duration_time_start></menu_duration_time_start>
+        <menu_duration_time_end></menu_duration_time_end>
+      </menu_duration>
+      <menu_groups>
+        <menu_group name="PIZZA &amp; CALZONE" uid="3eb4f790-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ac526-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>NAPOLETANA</menu_item_name>
+              <menu_item_description>MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, PARMIGIANO-REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>16.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac562-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MARGHERITA</menu_item_name>
+              <menu_item_description>HANDROLLED MOZZARELLA, FRESH TOMATO AND BASIL, PARMIGIANO-REGGIANO, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac5a8-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>SALSICCIA</menu_item_name>
+              <menu_item_description>ITALIAN SWEET FENNEL SAUSAGE, PEPPERS, SPANISH ONION, MOZZARELLA AND PROVOLONE CHEESE, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac5ee-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>BIANCO</menu_item_name>
+              <menu_item_description>RICOTTA, MOZZARELLA AND PROVOLONE CHEESES, EXTRA VIRGIN OLIVE OIL AND PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>17.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac62a-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>ZUCCO E FUNGHI</menu_item_name>
+              <menu_item_description>GRATED ZUCCHINI, SHAVED PORTOBELLA, MOZZARELLA AND PROVOLONE CHEESE, SWEET ONION, TOASTED BREAD CRUMBS</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac670-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>MELANZANE</menu_item_name>
+              <menu_item_description>CRISPY EGGPLANT, MOZZARELLA AND PROVOLONE CHEESES, HOMEMADE TOMATO SAUCE, EXTRA VIRGIN OLIVE OIL, PARMIGIANO-REGGIANO</menu_item_description>
+              <menu_item_price>16.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac6ac-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>QUATTRO FORMAGGIO CALZONE</menu_item_name>
+              <menu_item_description>CRISPY HOMEMADE PIZZA DOUGH, RICOTTA, PROVOLONE, MOZZARELLA AND PARMIGIANO CHEESES HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>9.00</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac6f2-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>PROSCIUTTO CALZONE</menu_item_name>
+              <menu_item_description>PROSCIUTTO DI PARMA, CRISPY PIZZA DOUGH, RICOTTA CHEESE AND HOMEMADE MARINARA SAUCE</menu_item_description>
+              <menu_item_price>9.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+        <menu_group name="FRITTI" uid="3eb4f7c2-27f2-11e1-80ac-00163eeae34c">
+          <menu_group_description></menu_group_description>
+          <menu_group_note></menu_group_note>
+          <menu_items>
+            <menu_item uid="422ac72e-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>CALAMARI FRITTI</menu_item_name>
+              <menu_item_description></menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+            <menu_item uid="422ac774-27f2-11e1-80ac-00163eeae34c">
+              <menu_item_name>WINGS DIAVLO</menu_item_name>
+              <menu_item_description></menu_item_description>
+              <menu_item_price>12.50</menu_item_price>
+            </menu_item>
+          </menu_items>
+        </menu_group>
+      </menu_groups>
+    </menu>
+  </menus>
+</omf>

@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="Microsoft.DPE.ReferenceApps.Food.Client.Controls.RestaurantCustomBalloon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft.DPE.ReferenceApps.Food.Client"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrols="using:Microsoft.DPE.ReferenceApps.Food.Client.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="100"
+    d:DesignWidth="200"
+    Margin="-25,-120,0,0">
+    
+    <UserControl.Resources />
+    
+    <StackPanel IsTapEnabled="True" IsDoubleTapEnabled="True">
+                
+        <Grid x:Name="balloonFlyout" 
+              Background="{Binding BGFillBrush}" 
+              Visibility="{Binding BalloonFlyoutVisibility}"
+              Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Border BorderThickness="2" Background="WhiteSmoke" BorderBrush="{StaticResource AppPurpleBrush}" Padding="12" Margin="0" Width="160" Height="100">
+                <StackPanel Margin="0">
+                    <TextBlock
+                        Grid.Row="0"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource AppPurpleBrush}"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Text="{Binding Restaurant.Name}"
+                        TextWrapping="Wrap"
+                        TextTrimming="WordEllipsis"
+                        MaxHeight="100"/>
+                    <usercontrols:RatingsControl Width="100" Height="15" StarColor="{StaticResource AppGreenColor}" StarBrush="{StaticResource AppGreenBrush}" RatingValue="{Binding AverageRating}" />
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="{StaticResource AppPurpleBrush}"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Left"
+                        Text="{Binding Restaurant.FactualRecord.cuisine}"
+                        TextWrapping="Wrap"
+                        TextTrimming="WordEllipsis"
+                        MaxHeight="40"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Polygon
+            x:Name="pointer"
+            Points="40,0, 0,0, 20,20"
+            Fill="{StaticResource AppPurpleBrush}"
+            StrokeThickness="0"
+            Margin="10,-1,0,0"/>
+    </StackPanel>
+
+</UserControl>

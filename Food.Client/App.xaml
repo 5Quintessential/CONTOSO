@@ -1,0 +1,53 @@
+﻿<Application
+    x:Class="Microsoft.DPE.ReferenceApps.Food.Client.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft.DPE.ReferenceApps.Food.Client"
+    xmlns:converters="using:Microsoft.DPE.ReferenceApps.Food.Lib.Converters"
+    xmlns:models="using:Microsoft.DPE.ReferenceApps.Food.Lib.Models"
+    RequestedTheme="Light">
+
+    <Application.Resources>    
+        
+        <ResourceDictionary>
+            <converters:DateTimeConverter x:Key="DateTimeConverter" />
+            <converters:PriceRangeToDollarsConverter x:Key="PriceRangeToDollarsConverter" />
+            <converters:PriceRangeToTextConverter x:Key="PriceRangeToTextConverter" />
+            <converters:NullableBoolToStringConverter x:Key="NullableBoolToStringConverter" />
+            <converters:TitleCaseConverter x:Key="TitleCaseConverter" />
+            <converters:DealPercentageSavingsConverter x:Key="DealPercentageSavingsConverter" />
+            <converters:StarRatingConverter x:Key="StarRatingConverter" />
+            <converters:ParagraphConverter x:Key="ParagraphConverter" />
+            <converters:HowManyMoreTextConverter x:Key="HowManyMoreTextConverter" />
+            <converters:HowManyMoreBooleanConverter x:Key="HowManyMoreBooleanConverter" />
+            <converters:UpperCaseConverter x:Key="UpperCaseConverter" />
+            <converters:VisibilityNegationConverter x:Key="VisibilityNegationConverter" />
+            <converters:CusineRawStringToCusineDisplayNameConverter x:Key="CusineRawStringToCusineDisplayNameConverter" />
+            <converters:DoubleRoundupConverter x:Key="DoubleRoundupConverter" />
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converters:PhoneNumberFormattingConverter x:Key="PhoneNumberFormattingConverter"/>
+            <converters:QuotedTextConverter x:Key="QuotedTextConverter"/>
+            <converters:ParallaxConverter x:Key="ParallaxConverter"/>
+            <converters:CollectionCountVisibilityConverter x:Key="CollectionCountVisibilityConverter"/>
+            <converters:CuisineToStringConverter x:Key="CuisineToStringConverter"/>
+            <converters:SearchDistanceMilesConverter x:Key="SearchDistanceMilesConverter"/>
+            <converters:TrimConverter x:Key="TrimConverter"/>
+            <converters:NullVisibilityConverter x:Key="NullVisibilityConverter"/>
+            
+            <Color x:Key="AppWhiteColor">White</Color>
+            <Color x:Key="AppBlackColor">#FF242625</Color>
+            <Color x:Key="AppPurpleColor">#FF6e2253</Color>
+            <Color x:Key="AppGreenColor">#FF79b200</Color>
+
+            <SolidColorBrush Color="{StaticResource AppWhiteColor}" Opacity=".75" x:Key="AppTransparentWhiteBrush" />
+            <SolidColorBrush Color="{StaticResource AppBlackColor}" x:Key="AppBlackBrush" />
+            <SolidColorBrush Color="{StaticResource AppPurpleColor}" x:Key="AppPurpleBrush" />
+            <SolidColorBrush Color="{StaticResource AppGreenColor}" x:Key="AppGreenBrush" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

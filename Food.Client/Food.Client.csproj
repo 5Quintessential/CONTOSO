@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75E94F00-98C3-410D-9133-C1D902A9A65A}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.DPE.ReferenceApps.Food.Client</RootNamespace>
+    <AssemblyName>Food.Client</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Food.Client_StoreKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PackageCertificateThumbprint>F0429C94266D5B70AB8186EFF7FDC2810D805D5E</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Food.Lib\Food.Lib.csproj">
+      <Project>{45f047c9-71f9-4b44-a037-37928eff0ff3}</Project>
+      <Name>Food.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppHub.xaml.cs">
+      <DependentUpon>AppHub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClusteredPinControl.xaml.cs">
+      <DependentUpon>ClusteredPinControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RatingsControl.xaml.cs">
+      <DependentUpon>RatingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flyouts\RestaurantFilterFlyout.xaml.cs">
+      <DependentUpon>RestaurantFilterFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\RestaurantList.xaml.cs">
+      <DependentUpon>RestaurantList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Details\GalleryViewPage.xaml.cs">
+      <DependentUpon>GalleryViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\MenuViewPage.xaml.cs">
+      <DependentUpon>MenuViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Details\RestaurantDetailsPage.xaml.cs">
+      <DependentUpon>RestaurantDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flyouts\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flyouts\SetLocation.xaml.cs">
+      <DependentUpon>SetLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flyouts\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sample\HubViewModel.cs" />
+    <Compile Include="Sample\Restaurant.cs" />
+    <Compile Include="Sample\Restaurants.cs" />
+    <Compile Include="Sections\MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RestaurantCustomBalloon.xaml.cs">
+      <DependentUpon>RestaurantCustomBalloon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\TeamViewModel.cs" />
+    <Compile Include="ViewModels\RestaurantDetailsViewModel.cs" />
+    <Compile Include="ViewModels\HubViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\RestaurantCollectionViewModel.cs" />
+    <Compile Include="ViewModels\RestaurantFilterFlyoutViewModel.cs" />
+    <Compile Include="ViewModels\RestaurantListViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Food.Client_StoreKey.pfx" />
+    <None Include="Food.Client_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bg_01.jpg" />
+    <Content Include="Assets\bg_02.jpg" />
+    <Content Include="Assets\bottom-forks_02.png" />
+    <Content Include="Assets\breakfast-big_1.jpg" />
+    <Content Include="Assets\breakfast-big_2.jpg" />
+    <Content Include="Assets\breakfast-big_3.jpg" />
+    <Content Include="Assets\breakfast-big_4.jpg" />
+    <Content Include="Assets\breakfast-big_5.jpg" />
+    <Content Include="Assets\breakfast-big_6.jpg" />
+    <Content Include="Assets\breakfast-big_7.jpg" />
+    <Content Include="Assets\breakfast-big_8.jpg" />
+    <Content Include="Assets\breakfast-big_9.jpg" />
+    <Content Include="Assets\breakfast_1.jpg" />
+    <Content Include="Assets\breakfast_2.jpg" />
+    <Content Include="Assets\breakfast_3.jpg" />
+    <Content Include="Assets\breakfast_4.jpg" />
+    <Content Include="Assets\breakfast_5.jpg" />
+    <Content Include="Assets\breakfast_6.jpg" />
+    <Content Include="Assets\breakfast_7.jpg" />
+    <Content Include="Assets\burger-big_1.jpg" />
+    <Content Include="Assets\burger-big_2.jpg" />
+    <Content Include="Assets\burger-big_3.jpg" />
+    <Content Include="Assets\burger-big_4.jpg" />
+    <Content Include="Assets\burger-big_5.jpg" />
+    <Content Include="Assets\burger-big_6.jpg" />
+    <Content Include="Assets\burger-big_7.jpg" />
+    <Content Include="Assets\burger-big_8.jpg" />
+    <Content Include="Assets\burger-big_9.jpg" />
+    <Content Include="Assets\burger_1.jpg" />
+    <Content Include="Assets\burger_2.jpg" />
+    <Content Include="Assets\burger_3.jpg" />
+    <Content Include="Assets\burger_4.jpg" />
+    <Content Include="Assets\burger_5.jpg" />
+    <Content Include="Assets\burger_6.jpg" />
+    <Content Include="Assets\burger_7.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_1.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_2.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_3.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_4.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_5.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_6.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_7.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_8.jpg" />
+    <Content Include="Assets\cereals-bleuberry-big_9.jpg" />
+    <Content Include="Assets\cereals-blueberry_1.jpg" />
+    <Content Include="Assets\cereals-blueberry_2.jpg" />
+    <Content Include="Assets\cereals-blueberry_3.jpg" />
+    <Content Include="Assets\cereals-blueberry_4.jpg" />
+    <Content Include="Assets\cereals-blueberry_5.jpg" />
+    <Content Include="Assets\cereals-blueberry_6.jpg" />
+    <Content Include="Assets\cereals-blueberry_7.jpg" />
+    <Content Include="Assets\coffee-big_1.jpg" />
+    <Content Include="Assets\coffee-big_2.jpg" />
+    <Content Include="Assets\coffee-big_3.jpg" />
+    <Content Include="Assets\coffee-big_4.jpg" />
+    <Content Include="Assets\coffee-big_5.jpg" />
+    <Content Include="Assets\coffee-big_6.jpg" />
+    <Content Include="Assets\coffee-big_7.jpg" />
+    <Content Include="Assets\coffee-big_8.jpg" />
+    <Content Include="Assets\coffee-big_9.jpg" />
+    <Content Include="Assets\coffee_1.jpg" />
+    <Content Include="Assets\coffee_2.jpg" />
+    <Content Include="Assets\coffee_3.jpg" />
+    <Content Include="Assets\coffee_4.jpg" />
+    <Content Include="Assets\coffee_5.jpg" />
+    <Content Include="Assets\coffee_6.jpg" />
+    <Content Include="Assets\coffee_7.jpg" />
+    <Content Include="Assets\courgettes-big_1.jpg" />
+    <Content Include="Assets\courgettes-big_2.jpg" />
+    <Content Include="Assets\courgettes-big_3.jpg" />
+    <Content Include="Assets\courgettes-big_4.jpg" />
+    <Content Include="Assets\courgettes-big_5.jpg" />
+    <Content Include="Assets\courgettes-big_6.jpg" />
+    <Content Include="Assets\courgettes-big_7.jpg" />
+    <Content Include="Assets\courgettes-big_8.jpg" />
+    <Content Include="Assets\courgettes-big_9.jpg" />
+    <Content Include="Assets\courgettes_1.jpg" />
+    <Content Include="Assets\courgettes_2.jpg" />
+    <Content Include="Assets\courgettes_3.jpg" />
+    <Content Include="Assets\courgettes_4.jpg" />
+    <Content Include="Assets\courgettes_5.jpg" />
+    <Content Include="Assets\courgettes_6.jpg" />
+    <Content Include="Assets\courgettes_7.jpg" />
+    <Content Include="Assets\fork-logo_07.png" />
+    <Content Include="Assets\forks-bottom_03.png" />
+    <Content Include="Assets\icons-website_03.png" />
+    <Content Include="Assets\logo2_03.png" />
+    <Content Include="Assets\Logos\dpe_blue.png" />
+    <Content Include="Assets\map-pincluster-icon.png" />
+    <Content Include="Assets\ms_dpe_logo.png" />
+    <Content Include="Assets\potatoes-big_1.jpg" />
+    <Content Include="Assets\potatoes-big_2.jpg" />
+    <Content Include="Assets\potatoes-big_3.jpg" />
+    <Content Include="Assets\potatoes-big_4.jpg" />
+    <Content Include="Assets\potatoes-big_5.jpg" />
+    <Content Include="Assets\potatoes-big_6.jpg" />
+    <Content Include="Assets\potatoes-big_7.jpg" />
+    <Content Include="Assets\potatoes-big_8.jpg" />
+    <Content Include="Assets\potatoes-big_9.jpg" />
+    <Content Include="Assets\potatoes_1.jpg" />
+    <Content Include="Assets\potatoes_2.jpg" />
+    <Content Include="Assets\potatoes_3.jpg" />
+    <Content Include="Assets\potatoes_4.jpg" />
+    <Content Include="Assets\potatoes_5.jpg" />
+    <Content Include="Assets\potatoes_6.jpg" />
+    <Content Include="Assets\potatoes_7.jpg" />
+    <Content Include="Assets\ribbon_03.png" />
+    <Content Include="Assets\splash-screen-logo_03.png" />
+    <Content Include="Assets\Team\Harry.jpg" />
+    <Content Include="Assets\Team\Ian.jpg" />
+    <Content Include="Assets\Team\Jennifer.jpg" />
+    <Content Include="Assets\Team\Jerry.jpg" />
+    <Content Include="Assets\Team\Jim.jpg" />
+    <Content Include="Assets\Team\Jit.jpg" />
+    <Content Include="Assets\tile-150.png" />
+    <Content Include="Assets\tile-24.png" />
+    <Content Include="Assets\tile-30.png" />
+    <Content Include="Assets\tile-50.png" />
+    <Content Include="Assets\Logos\UI-Centric-logo-small.png" />
+    <Content Include="Images\BackgroundTile.jpg" />
+    <Content Include="Images\Map.jpg" />
+    <Content Include="Images\reviewsFromYelpWHT.gif" />
+    <Content Include="Images\SurpriseMe.jpg" />
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AppHub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ClusteredPinControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RatingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\RestaurantFilterFlyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sections\RestaurantList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Details\MenuViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\GalleryViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Details\RestaurantDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\SetLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\MapPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RestaurantCustomBalloon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Bing.Maps.Xaml, Version=1.0">
+      <Name>Bing Maps for C#, C++, or Visual Basic %28Beta%29</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=11.0">
+      <Name>Microsoft Visual C++ Runtime Package</Name>
+    </SDKReference>
+    <SDKReference Include="MSAdvertisingXaml, Version=6.1">
+      <Name>Microsoft Advertising SDK for Windows 8 %28Xaml%29</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,52 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microsoft.DPE.ReferenceApps.Food.Lib.Controls">
+
+
+
+  <Style TargetType="local:RatingItemContainer" x:Key="defaultRatingItemStyle">
+    <Setter Property="Height" Value="24"/>
+    <Setter Property="Margin" Value="0,0,2.5,0"/>
+    <Setter Property="Fill" Value="LimeGreen"/>
+    <Setter Property="Stroke" Value="LimeGreen"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="local:RatingItemContainer">
+          <Grid Margin="{TemplateBinding Margin}" x:Name="gridContainer" Height="{TemplateBinding Height}" Width="{TemplateBinding Height}">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="0.5*"/>
+              <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Path x:Name="Path_LeftHalf" 
+                    Stretch="Fill" StrokeLineJoin="Round" 
+                    Stroke="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LeftStroke}" 
+                    Fill="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LeftFill}" 
+                    StrokeThickness="2" 
+                    Height="{TemplateBinding Height}"
+                  Data="F1 M 28.9096,0.499996L 21.986,20.8558L 0.500004,21.6603L 17.72,34.5353L 11.8456,55.2183L 29.4117,42.8198" Grid.Column="0" />
+            <Path x:Name="Path_RightHalf" Stretch="Fill" StrokeLineJoin="Round" Margin="-3,0,0,0"
+                    Stroke="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=RightStroke}" 
+                    Fill="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=RightFill}" 
+                    StrokeThickness="2" 
+                    Height="{TemplateBinding Height}"
+                  Data="F1 M 60.6715,49.6699L 78.5269,61.6482L 72.1635,41.1104L 89.0731,27.8304L 67.5741,27.5359L 60.1694,7.35013" Grid.Column="1"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+
+  <Style TargetType="local:RatingsControl">
+    <Setter Property="Height" Value="56"/> 
+    <Setter Property="ItemContainerStyle" Value="{StaticResource defaultRatingItemStyle}"/> 
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style> 
+</ResourceDictionary>
